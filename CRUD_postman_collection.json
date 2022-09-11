@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "8c907939-946f-4812-95dd-272b1415d5af",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21416626"
+	},
+	"item": [
+		{
+			"name": "Get All users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Arif",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Arif12@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIzYjZlNDBlNi1lYTZhLTRiYjQtODczZi1lNTZiY2ZiMjgzNGQiLCJlbWFpbCI6InJhZmF0YWhtZDk2M0BnbWFpbC5jb20iLCJuYW1lIjoiUmFmYXQiLCJpYXQiOjE2NjA1OTcyNTEsImV4cCI6MTY2MTIwMjA1MX0.o45V6Y35r3pQj4Cr7J96pwyJTUrjFF-TexHQq1IQkdw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "rafat",
+							"type": "text"
+						},
+						{
+							"key": "PreviousPass",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "NewPassword",
+							"value": "1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIwODdmOGY0ZC02NjZhLTQ4NzItYTg3Yy1kNjBiNWE3ZTkwNTQiLCJlbWFpbCI6IlJBRkFUQUhNRDk2M0BHTUFJTC5DT00iLCJuYW1lIjoiUmFmYXQiLCJpYXQiOjE2NjA1ODQ1MjUsImV4cCI6MTY2MTE4OTMyNX0.4VIffEHxWDJgTWD0eGdEkdwOibsd-psCILKQfEDJewk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rafatahmd963@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/users/034faf49-a3de-49aa-ab91-3192ef7e07c0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"034faf49-a3de-49aa-ab91-3192ef7e07c0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/news/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My News",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI0NTU3NGI1Mi1jNGZjLTRlMmYtYWU0OC00MjcwYTFmZmRhOTgiLCJlbWFpbCI6InNoYXdvbjEyM0BnbWFpbC5jb20iLCJuYW1lIjoic2hhd29uIiwiaWF0IjoxNjYwNTc0MjkwLCJleHAiOjE2NjExNzkwOTB9.67r1pwrTmnpLskBaZsw_cKk__7Ue-CFq5eDuYmw8mMU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/news/mynews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"mynews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish a news",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI0NTU3NGI1Mi1jNGZjLTRlMmYtYWU0OC00MjcwYTFmZmRhOTgiLCJlbWFpbCI6InNoYXdvbjEyM0BnbWFpbC5jb20iLCJuYW1lIjoic2hhd29uIiwiaWF0IjoxNjYwNTc1MDA5LCJleHAiOjE2NjExNzk4MDl9.8oKYzFyJXiUKXyIc6fLHzGFKhk_xIVna4sDTLWNRw5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Hello",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "content",
+							"value": "Hello",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "hello.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/news/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update News",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI0NTU3NGI1Mi1jNGZjLTRlMmYtYWU0OC00MjcwYTFmZmRhOTgiLCJlbWFpbCI6InNoYXdvbjEyM0BnbWFpbC5jb20iLCJuYW1lIjoic2hhd29uIiwiaWF0IjoxNjYwNTc1MDA5LCJleHAiOjE2NjExNzk4MDl9.8oKYzFyJXiUKXyIc6fLHzGFKhk_xIVna4sDTLWNRw5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Hi",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Hi",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "Hi.jpeg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/news/476e297a-f0c0-4ce3-b571-7b842e55dc67",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"476e297a-f0c0-4ce3-b571-7b842e55dc67"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete News",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI0NTU3NGI1Mi1jNGZjLTRlMmYtYWU0OC00MjcwYTFmZmRhOTgiLCJlbWFpbCI6InNoYXdvbjEyM0BnbWFpbC5jb20iLCJuYW1lIjoic2hhd29uIiwiaWF0IjoxNjYwNTc1MDA5LCJleHAiOjE2NjExNzk4MDl9.8oKYzFyJXiUKXyIc6fLHzGFKhk_xIVna4sDTLWNRw5E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/news/476e297a-f0c0-4ce3-b571-7b842e55dc67",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"476e297a-f0c0-4ce3-b571-7b842e55dc67"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
